@@ -1,0 +1,23 @@
+Description: Fix the install path of the binary
+Author: Talha Can Havadar <talha.can.havadar@canonical.com>
+Forwarded: https://github.com/Xilinx/axi-qos/pull/1
+Applied-Upstream: https://github.com/Xilinx/axi-qos/commit/0b414245ba9048a8874ee62576f8f4ecc2f65ce6
+Last-Update: 2024-03-20
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/axi-qos/CMakeLists.txt
++++ b/axi-qos/CMakeLists.txt
+@@ -31,7 +31,7 @@
+
+ include_directories(include)
+ file(GLOB SOURCES "src/*.c")
+-SET(INSTALL_PATH "usr/bin")
++SET(INSTALL_PATH "bin")
+
+ # Declare the executable target built from your sources
+ add_executable(axi-qos ${SOURCES})
+@@ -51,4 +51,3 @@
+ set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CPACK_PACKAGE_RELEASE}.${CMAKE_SYSTEM_PROCESSOR}")
+ set(CPACK_RPM_SPEC_MORE_DEFINE "%define _build_id_links none")
+ include(CPack)
+-

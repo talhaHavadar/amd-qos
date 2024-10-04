@@ -1,0 +1,7 @@
+amd-qos
+--------------
+amd-qos is a multiple upstream tarball package, it contains the tarballs for
+ddr-qos (https://github.com/Xilinx/ddr-qos) and axi-qos (https://github.com/Xilinx/axi-qos)
+
+Since it doesn't have a main package, an empty orig tarball is created for amd-qos
+by using the command `dpkg-buildpackage -S --source-option=--create-empty-orig`

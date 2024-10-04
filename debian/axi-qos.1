@@ -1,0 +1,38 @@
+.TH AXI-QOS "1" "October 2024" "axi-qos 2024.1" "User Commands"
+.SH NAME
+axi-qos \- application to set QOS value of AXI ports on ZynqMP platforms
+
+.SH DESCRIPTION
+Xilinx copyright 2021
+.PP
+This application is to set QOS valuefor AXI ports
+.IP
+on ZYNQMP platform
+.PP
+usage: axi\-qos [OPTIONS]
+.PP
+axi\-qos \fB\-s\fR <val> \fB\-t\fR <qos type> \fB\-p\fR <port num>
+.PP
+axi\-qos \fB\-g\fR \fB\-t\fR <qos type> \fB\-p\fR <port num>
+.PP
+\fB\-s\fR represents set qos value :range[0\-0xf]
+.PP
+\fB\-g\fR represents get qos value for the given port
+.PP
+\fB\-t\fR represents qos type :range[1\-4]
+1\-read qos
+2\-write qos
+3\-outstanding_rdissue
+4\-outstanding_wrissue
+.PP
+\fB\-p\fR represents port no
+.IP
+0\-HPC0
+1\-HPC1
+2\-HP0
+3\-HP1
+4\-HP2
+5\-HP3
+6\-All ports
+.PP
+\fB\-v\fR represents version

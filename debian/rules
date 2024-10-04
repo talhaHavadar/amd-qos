@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure --sourcedirectory=axi-qos --builddirectory=axi-qos_build $@
+	dh_auto_configure --sourcedirectory=ddr-qos --builddirectory=ddr-qos_build $@
+
+override_dh_auto_build:
+	dh_auto_build --sourcedirectory=axi-qos --builddirectory=axi-qos_build $@
+	dh_auto_build --sourcedirectory=ddr-qos --builddirectory=ddr-qos_build $@
+
+override_dh_auto_clean:
+	dh_auto_clean --sourcedirectory=axi-qos --builddirectory=axi-qos_build $@
+	dh_auto_clean --sourcedirectory=ddr-qos --builddirectory=ddr-qos_build $@
+
+override_dh_auto_install:
+	dh_auto_install --sourcedirectory=axi-qos --builddirectory=axi-qos_build $@
+	dh_auto_install --sourcedirectory=ddr-qos --builddirectory=ddr-qos_build $@

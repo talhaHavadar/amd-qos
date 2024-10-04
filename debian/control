@@ -1,0 +1,34 @@
+Source: amd-qos
+Section: utils
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: cmake, debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://xilinx-wiki.atlassian.net/wiki/x/AQAEKQ
+Rules-Requires-Root: no
+
+Package: amd-axi-qos
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: xmutil (<< 1:1.2.1)
+Replaces: xmutil (<< 1:1.2.1)
+Description: application to set QOS value of AXI ports on ZynqMP platforms
+ This Debian binary package enables users to manipulate QOS values of
+ AXI ports on ZynqMP platforms including KD240, KV260 and KR260 board families
+ .
+ Binary provided by this tool also being used by xmutil utility tool that is
+ provided by AMD
+
+Package: amd-ddr-qos
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: xmutil (<< 1:1.2.1)
+Replaces: xmutil (<< 1:1.2.1)
+Description: application to set QOS value of DDR slots in ZynqMP platforms
+ This Debian binary package enables users to manipulate QOS values of
+ DDR slots in ZynqMP platforms including KD240, KV260 and KR260 board families.
+ .
+ Binary provided by this tool also being used by xmutil utility tool that is
+ provided by AMD

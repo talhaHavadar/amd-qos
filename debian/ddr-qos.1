@@ -1,0 +1,32 @@
+.TH DDR-QOS "1" "October 2024" "ddr-qos 2024.1" "User Commands"
+.SH NAME
+ddr-qos \- application to set QOS value of DDR slots on ZynqMP platforms
+
+.SH DESCRIPTION
+Xilinx copyright 2021
+.PP
+This application is to set QOS value forDDR slots
+.IP
+on zynqmp platform
+.PP
+usage: ddr\-qos [OPTIONS]
+.PP
+ddr\-qos \fB\-s\fR <val> \fB\-p\fR <port num>
+.PP
+ddr\-qos \fB\-g\fR \fB\-p\fR <port num>
+.PP
+\fB\-s\fR represents set qos value :range[0\-0x2]
+.PP
+\fB\-g\fR represents get qos value for the given port
+.PP
+\fB\-p\fR represents port no[0\-6]
+.IP
+0\-port0
+1\-port1r
+2\-port2r
+3\-port3
+4\-port4
+5\-port5
+6\-all ports
+.PP
+\fB\-v\fR represents version
