@@ -1,4 +1,4 @@
-amd-qos (2024.1-0ubuntu1) oracular; urgency=low
+amd-qos (2024.1-0ubuntu1~24.04.1~xlnx1) noble; urgency=low
 
   * Initial release. (LP: #2067254)
 
